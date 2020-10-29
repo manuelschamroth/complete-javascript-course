@@ -209,7 +209,7 @@ console.log('23' > '18');
 let n = '1' + 1;
 n = n - 1;
 console.log(n);
-*/
+
 
 // 5 falsy values: 0, '', undefined, null, NaN
 
@@ -221,9 +221,66 @@ console.log(Boolean(NaN));
 console.log(Boolean('Jonas'));
 console.log(Boolean({}));
 
-const money = 'Jonas';
+const money = 0;
 if(money){
   console.log("Don't spend it all");
 } else {
   console.log('You should get a job!');
+}
+
+let height = 0;
+if(height) {
+  console.log('Yay! Height is defined');
+} else {
+  console.log(('Height is undefined'));
+}
+
+
+const age = '18';
+if(age === 18) console.log('You just became an adult - Strict');
+if(age == 18) console.log('You just became an adult - Loose');
+
+const favourite = Number(prompt("What's your favourite number?"));
+console.log(favourite);
+console.log(typeof favourite);
+
+
+if (favourite === 23) {
+  console.log('Cool, 23 is an amazing number.');
+} else if(favourite === 7) {
+  console.log('Number 7 is also cool!');
+} else {
+  console.log('Number 7 and 23 are missing');
+}
+
+
+const age = 16;
+if(age > 20 && age < 30){
+  console.log("I'm in my mid 20's");
+} else {
+  console.log("I'm not in my 20's");
+}
+if(age > 20 || age < 30){
+  console.log("I'm in my mid 20's");
+} else {
+  console.log("I'm not in my 20's");
+}
+*/
+
+// const dolphins = (96 + 108 + 89) / 3;
+// const koalas = (88 + 91 + 110) / 3;
+
+const dolphins = (97 + 112 + 101) / 3;
+const koalas = (109 + 95 + 106) / 3;
+
+if(dolphins === koalas && dolphins >= 100){
+  console.log(`Dolphins and Koalas have a draw of ${dolphins} and both won`);
+} else if (dolphins === koalas && dolphins <= 100) {
+  console.log(`Dolphins and Koalas have a draw of ${dolphins} and both lost`);
+} else if (dolphins > koalas && dolphins >= 100) {
+  console.log(`Dolphins average score of ${dolphins} is bigger than Koalas and is the winner`);
+} else if (dolphins < koalas && dolphins >= 100) {
+  console.log(`Koalas average score of ${koalas} is bigger than Dolphins and is the winner`);
+} else {
+  console.log(`Dolphins and Koalas did not score above 100 points and lost`);
 }
