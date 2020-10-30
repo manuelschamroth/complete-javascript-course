@@ -265,7 +265,7 @@ if(age > 20 || age < 30){
 } else {
   console.log("I'm not in my 20's");
 }
-*/
+
 
 // const dolphins = (96 + 108 + 89) / 3;
 // const koalas = (88 + 91 + 110) / 3;
@@ -284,3 +284,4 @@ if(dolphins === koalas && dolphins >= 100){
 } else {
   console.log(`Dolphins and Koalas did not score above 100 points and lost`);
 }
+*/
