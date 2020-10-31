@@ -284,4 +284,90 @@ if(dolphins === koalas && dolphins >= 100){
 } else {
   console.log(`Dolphins and Koalas did not score above 100 points and lost`);
 }
+
+
+const day = 'Sunday';
+
+switch(day) {
+  case 'Monday':
+    console.log('Plan course structure');
+    console.log('Go to coding meetup');
+    break;
+  case 'Tuesday':
+    console.log('Prepare video');
+    break;
+  case 'Wednesday':
+  case 'Thursday':
+    console.log('Write code exmple');
+    break;
+  case 'Friday':
+    console.log('time to visit');
+    break;
+  case 'Saturday':
+  case 'Sunday':
+    console.log('enjoy the weekend');
+    break;
+  default:
+    console.log('Not a valid day');
+}
+
+if(day === 'Monday'){
+  console.log('it is Monday');
+} else if(day === 'Tuesday') {
+  console.log('it is Tuesday');
+} else if(day === 'Wednesday') {
+  console.log('it is Wednesday');
+} else if(day === 'Thursday') {
+  console.log('it is Thursday');
+} else if(day === 'Friday') {
+  console.log('it is Friday');
+} else if(day === 'Saturday' || day === 'Sunday') {
+  console.log('Enjoy the weekend');
+} else {
+  console.log('Its not a day');
+}
+
+
+// Statements - A piece of code that generates a value
+3 + 4
+1994
+true && false && !false
+
+// Expressions - A bigger piece of code that does not produce a value. If Else statements and Switch are examples. It declares not produce.
+if(23>10){
+  const str = '23 is bigger';
+}
+
+
+// CONDITIONAL OPERATOR or Tirdnary operator
+
+const age = 23;
+age >= 18 ? console.log('I like to dring wine') : console.log('I like to dring water');
+
+const drink = age >= 18 ? 'wine' : 'water';
+console.log(drink);
+
+let drink2;
+if(age >=18) {
+  drink2 = 'wine';
+} else {
+  drink2 = 'wanter'
+}
+
+console.log(drink2);
+
+console.log(`I like to drink ${drink2}`);
+console.log(`I like to drink ${age >= 18 ? 'wine' : 'water'}`);
+
+// const bill = 275;
+// const bill = 40;
+const bill = 430;
+const tip1 = bill*0.15;
+const tip2 = bill*0.20;
+
+bill >= 50 && bill <= 300 ? console.log(`The bill was ${bill}, the tip was ${tip1} and total value is ${bill + tip1}`) : console.log(`The bill was ${bill}, the tip was ${tip2} and total value is ${bill + tip2}`);
+
+const tip = bill >= 50 && bill <= 300 ? bill*0.15 : bill*0.20 ;
+
+console.log(`The bill was ${bill}, the tip was ${tip} and total value is ${bill + tip}`);
 */
