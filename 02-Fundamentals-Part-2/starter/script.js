@@ -271,7 +271,7 @@ console.log(Person);
 //Person has 3 friends and his best friend is called Michael
 console.log(Person.family.length);
 console.log(`${Person.firstName} has ${Person.family.length} family members and his wife name is ${Person.family[0]}`);
-*/
+
 
 const Person = {
   firstName: 'Manuel',
@@ -279,7 +279,7 @@ const Person = {
   birthYear: 1965,
   job: 'Programmer',
   family: ['Reo', 'Ben', 'Eden', 'Yoni'],
-  canDriveCar: true,
+  canDriveCar: false,
   // calcAge: function(birthYear){
   //   return 2020 - birthYear;
   // }
@@ -292,6 +292,10 @@ const Person = {
   calcAge: function(){
     this.age = 2020 - this.birthYear;
     return this.age;
+  },
+
+  getSummary: function() {
+    return `${this.firstName} is a ${this.calcAge()} years old ${this.job}, and he has ${this.canDriveCar ? 'a' : 'no'} driver's license.`
   }
 };
 
@@ -308,13 +312,41 @@ console.log(Person['calcAge'](Person.birthYear));
 
 
 // Challange
-const canDrive = function() {
-  if(Person.canDriveCar){
-    return 'he can drive a car.';
-  } else {
-    return 'he cannot drive a car.';
+
+
+
+console.log(Person.getSummary());
+*/
+
+const Mark = {
+  firstName: 'Mark',
+  lastName: 'Miller',
+  weight: 78,
+  height: 1.69,
+  calcBMI: function() {
+    this.bmi = this.weight / this.height ** 2;
+    return this.bmi;
+  }
+}
+Mark.calcBMI();
+console.log(`Mark BMI ${Mark.bmi}`);
+
+const John = {
+  firstName: 'John',
+  lastName: 'Smith',
+  weight: 92,
+  height: 1.95,
+  calcBMI: function() {
+    this.bmi = this.weight / this.height ** 2;
+    return this.bmi;
   }
 }
 
+John.calcBMI();
+console.log(`John BMI ${John.bmi}`);
 
-console.log(`${Person.firstName} is a ${Person.age}-year old programmer and ${canDrive}`);
+const bigger = Mark.bmi < John.bmi;
+
+console.log(`${Mark.firstName} ${Mark.lastName} BMI (${Mark.bmi}) is ${bigger ? 'smaller' : 'bigger'} than John BMI (${John.bmi})`);
+
+console.log(bigger);
